@@ -8,16 +8,16 @@ const ConfettiButton = ({ children, confettiImage, className = "" }) => {
     const button = e.currentTarget.getBoundingClientRect();
     const newConfetti = [];
 
-    // Calculate position relative to the page (not viewport)
-    const pageX = button.left + window.pageXOffset;
-    const pageY = button.top + window.pageYOffset;
+    // Use viewport coordinates (button.left and button.top are already viewport-relative)
+    const viewportX = button.left + button.width / 2;
+    const viewportY = button.top + button.height / 2;
 
     // Generate 15-20 confetti pieces
     for (let i = 0; i < 20; i++) {
       newConfetti.push({
         id: Date.now() + i + Math.random(),
-        x: pageX + button.width / 2,
-        y: pageY + button.height / 2,
+        x: viewportX,
+        y: viewportY,
         angle: Math.random() * 360,
         velocity: 1 + Math.random() * 2, // Reduced from 1-5 to 0.5-2
         rotation: Math.random() * 360,

@@ -59,8 +59,8 @@ function App() {
           </h2>
         </div>
 
-        <LargeStickyNote color="yellow" className="mx-auto">
-          <div className="flex-row flex gap-8 items-center">
+        <LargeStickyNote color="yellow" className="mx-auto max-w-[200px] md:max-w-full">
+          <div className="flex gap-8 items-center flex-col md:flex-row">
             <div className="basis-1/3">
               <img
                 src="./profilepicture.jpeg"
@@ -100,17 +100,24 @@ function App() {
           Featured Projects
         </h2>
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-center">
           {projectsList.map(({ name, image, color, rotation }) => (
             <div key={name} className="basis-1/3 p-4">
-              <StickyNote color={color} className="mx-auto w-64" rotate={rotation}>
+              <StickyNote
+                color={color}
+                className="mx-auto w-64"
+                rotate={rotation}
+              >
                 <div>
                   <div
                     id="main body"
                     className="max-w-[1100px] mx-auto flex items-center justify-center p-4 gap-2"
                   >
                     <div className="w-32">
-                      <Sticker png={image} alt="My Sticker" />
+                      <img
+                        src={image}
+                        className="relative drop-shadow-md rounded-xl"
+                      />
                     </div>
                   </div>
                   <div>

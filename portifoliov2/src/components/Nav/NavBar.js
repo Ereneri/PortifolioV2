@@ -26,7 +26,7 @@ export default function NavBar() {
           aria-label="Toggle navigation"
           onClick={() => setOpen((s) => !s)}
         >
-          <Bars4Icon className="w-6 h-6 text-[#111]" />
+          <Bars4Icon className="w-6 h-6 text-white" />
         </button>
 
         <ul className={ulClass}>
