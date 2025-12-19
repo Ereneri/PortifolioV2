@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Bars4Icon } from "@heroicons/react/24/solid";
+import { Bars4Icon, CommandLineIcon, HomeIcon, UserIcon } from "@heroicons/react/16/solid";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
+    { name: "Home", href: "#home", Icon : HomeIcon},
+    { name: "Projects", href: "#projects", Icon: CommandLineIcon },
+    { name: "About", href: "#about", Icon : UserIcon  },
   ];
 
   const ulClass = open
@@ -30,13 +30,14 @@ export default function NavBar() {
         </button>
 
         <ul className={ulClass}>
-          {navLinks.map(({ name, href }) => (
+          {navLinks.map(({ name, href, Icon }) => (
             <li key={name}>
               <a
                 href={href}
                 onClick={() => setOpen(false)}
-                className="no-underline text-[#111] px-2 py-1 rounded-sm transition-colors duration-150 hover:bg-black/5 stroke-white text-lg"
+                className="no-underline text-[#111] px-2 py-1 rounded-sm transition-colors duration-150 hover:bg-black/5 stroke-white text-lg title-text"
             >
+              <Icon className="w-5 h-5 inline-block mr-1 mb-1 text-black stroke-white stroke-2" />
               {name}
             </a>
           </li>
