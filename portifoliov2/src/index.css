@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: "Cherry Bomb One", sans-serif;
@@ -8,7 +12,7 @@ body {
   background-repeat: repeat;
   background-position: center top;
   /* Keep background fixed so content scrolls over the corkboard */
-  background-attachment: fixed;
+  background-attachment: scroll;
   /* Fallback color if image isn't found */
   background-color: #d2b48c;
 }
