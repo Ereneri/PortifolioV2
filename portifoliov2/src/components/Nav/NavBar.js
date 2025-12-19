@@ -35,7 +35,7 @@ export default function NavBar() {
               <a
                 href={href}
                 onClick={() => setOpen(false)}
-                className="no-underline text-[#111] px-2 py-1 rounded-sm transition-colors duration-150 hover:bg-black/5 stroke-white text-lg title-text"
+                className="no-underline text-[#111] px-2 py-1 rounded-md transition-colors duration-150 stroke-white text-lg title-text hover:bg-white/10"
             >
               <Icon className="w-5 h-5 inline-block mr-1 mb-1 text-black stroke-white stroke-2" />
               {name}

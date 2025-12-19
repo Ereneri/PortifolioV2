@@ -34,9 +34,9 @@ export default function Footer() {
   return (
     <footer className="w-full bg-zinc-900 mt-16">
       <div className="max-w-[1100px] mx-auto p-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> */}
           {/* Left Section - Contact Form */}
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-bold text-white title-text">
               Send me a message
             </h3>
@@ -94,7 +94,7 @@ export default function Footer() {
                 Send Message
               </button>
             </form>
-          </div>
+          </div> */}
 
           {/* Right Section - Quick Links */}
           <div className="flex flex-col gap-4">
@@ -124,7 +124,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </footer>
   );
