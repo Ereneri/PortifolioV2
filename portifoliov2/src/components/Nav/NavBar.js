@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Bars4Icon, CommandLineIcon, HomeIcon, UserIcon } from "@heroicons/react/16/solid";
 
 export default function NavBar() {
@@ -32,14 +33,14 @@ export default function NavBar() {
         <ul className={ulClass}>
           {navLinks.map(({ name, href, Icon }) => (
             <li key={name}>
-              <a
-                href={href}
+              <Link
+                to={href}
                 onClick={() => setOpen(false)}
                 className="no-underline text-white px-2 py-1 rounded-md transition-colors duration-150 text-lg hover:bg-white/10"
             >
               <Icon className="w-5 h-5 inline-block mr-1 mb-1 text-white stroke-2" />
               {name}
-            </a>
+            </Link>
           </li>
         ))}
         </ul>
