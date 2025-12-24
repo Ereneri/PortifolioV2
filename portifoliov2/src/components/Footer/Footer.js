@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { HomeIcon, CommandLineIcon, UserIcon, PaperAirplaneIcon } from "@heroicons/react/16/solid";
 
 export default function Footer() {
@@ -9,9 +10,9 @@ export default function Footer() {
   });
 
   const quickLinks = [
-    { name: "Home", href: "#home", Icon: HomeIcon },
-    { name: "Projects", href: "#projects", Icon: CommandLineIcon },
-    { name: "About", href: "#about", Icon: UserIcon },
+    { name: "Home", href: "/", Icon: HomeIcon },
+    { name: "Projects", href: "/projects", Icon: CommandLineIcon },
+    { name: "About", href: "/about", Icon: UserIcon },
   ];
 
   const handleSubmit = (e) => {
@@ -105,13 +106,14 @@ export default function Footer() {
               <ul className="flex flex-col gap-3 list-none m-0 p-0">
                 {quickLinks.map(({ name, href, Icon }) => (
                   <li key={name}>
-                    <a
-                      href={href}
+                    <Link
+                      to={href}
+                      onClick={() => window.scrollTo(0, 0)}
                       className="flex items-center gap-2 no-underline text-light px-4 py-2 rounded-md transition-colors duration-150 hover:bg-white/10 text-lg"
                     >
                       <Icon className="w-5 h-5" />
                       {name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

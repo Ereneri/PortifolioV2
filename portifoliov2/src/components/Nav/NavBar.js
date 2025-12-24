@@ -10,19 +10,15 @@ export default function NavBar() {
     { name: "About", href: "/about", Icon : UserIcon  },
   ];
 
-  const ulClass = open
-    ? "flex flex-col absolute top-16 bg-zinc-900 p-2 rounded-md shadow-[0_6px_20px_rgba(0,0,0,0.08)] gap-4 md:flex md:flex-row md:static md:bg-transparent md:shadow-none md:p-0"
-    : "hidden md:flex md:flex-row list-none gap-4 m-0 p-0";
-
   return (
     <header className="w-full sticky top-0 z-50 code-font bg-secondary">
       <nav
-        className="max-w-[1100px] mx-auto flex items-center justify-center p-4 gap-2"
+        className="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-center p-4 gap-2"
         role="navigation"
         aria-label="Main navigation"
       >
         <button
-          className="md:hidden bg-transparent border-none text-[1.3rem] cursor-pointer"
+          className="md:hidden bg-transparent border-none text-[1.3rem] cursor-pointer self-start mt-2"
           aria-expanded={open}
           aria-label="Toggle navigation"
           onClick={() => setOpen((s) => !s)}
@@ -30,15 +26,25 @@ export default function NavBar() {
           <Bars4Icon className="w-6 h-6 text-white" />
         </button>
 
-        <ul className={ulClass}>
+        <ul 
+          className={`
+            flex flex-col list-none gap-4 m-0 p-0 w-full
+            md:flex-row md:w-auto
+            overflow-hidden transition-all duration-300 ease-in-out
+            ${open ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0 md:max-h-96 md:opacity-100 md:mt-0'}
+          `}
+        >
           {navLinks.map(({ name, href, Icon }) => (
             <li key={name}>
               <Link
                 to={href}
-                onClick={() => setOpen(false)}
-                className="no-underline text-white px-2 py-1 rounded-md transition-colors duration-150 text-lg hover:bg-white/10"
+                onClick={() => {
+                  setOpen(false);
+                  window.scrollTo(0, 0);
+                }}
+                className="no-underline text-white px-2 py-1 rounded-md transition-colors duration-150 text-lg hover:bg-white/10 flex items-center"
             >
-              <Icon className="w-5 h-5 inline-block mr-1 mb-1 text-white stroke-2" />
+              <Icon className="w-5 h-5 inline-block mr-1 text-white stroke-2" />
               {name}
             </Link>
           </li>
