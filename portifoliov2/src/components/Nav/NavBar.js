@@ -14,7 +14,7 @@ export default function NavBar() {
     : "hidden md:flex md:flex-row list-none gap-4 m-0 p-0";
 
   return (
-    <header className="w-full bg-zinc-900 sticky top-0 z-50">
+    <header className="w-full sticky top-0 z-50 code-font bg-secondary">
       <nav
         className="max-w-[1100px] mx-auto flex items-center justify-center p-4 gap-2"
         role="navigation"
@@ -35,9 +35,9 @@ export default function NavBar() {
               <a
                 href={href}
                 onClick={() => setOpen(false)}
-                className="no-underline text-[#111] px-2 py-1 rounded-md transition-colors duration-150 stroke-white text-lg title-text hover:bg-white/10"
+                className="no-underline text-white px-2 py-1 rounded-md transition-colors duration-150 text-lg hover:bg-white/10"
             >
-              <Icon className="w-5 h-5 inline-block mr-1 mb-1 text-black stroke-white stroke-2" />
+              <Icon className="w-5 h-5 inline-block mr-1 mb-1 text-white stroke-2" />
               {name}
             </a>
           </li>

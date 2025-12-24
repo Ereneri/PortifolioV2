@@ -32,12 +32,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-zinc-900 mt-16">
+    <footer className="w-full bg-secondary mt-16">
       <div className="max-w-[1100px] mx-auto p-8">
         {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> */}
           {/* Left Section - Contact Form */}
           {/* <div className="flex flex-col gap-4">
-            <h3 className="text-2xl font-bold text-white title-text">
+            <h3 className="text-2xl font-bold text-light">
               Send me a message
             </h3>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -88,7 +88,7 @@ export default function Footer() {
               </div>
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold title-text text-lg transition-all hover:bg-white/90 hover:scale-105"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-md font-bold text-lg transition-all hover:bg-white/90 hover:scale-105"
               >
                 <PaperAirplaneIcon className="w-5 h-5" />
                 Send Message
@@ -97,8 +97,8 @@ export default function Footer() {
           </div> */}
 
           {/* Right Section - Quick Links */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-2xl font-bold text-white title-text">
+          <div className="flex flex-col gap-4 code-font">
+            <h3 className="text-2xl font-bold text-light">
               Quick Links
             </h3>
             <nav aria-label="Footer navigation">
@@ -107,7 +107,7 @@ export default function Footer() {
                   <li key={name}>
                     <a
                       href={href}
-                      className="flex items-center gap-2 no-underline text-white px-4 py-2 rounded-md transition-colors duration-150 hover:bg-white/10 text-lg title-text"
+                      className="flex items-center gap-2 no-underline text-light px-4 py-2 rounded-md transition-colors duration-150 hover:bg-white/10 text-lg"
                     >
                       <Icon className="w-5 h-5" />
                       {name}
@@ -119,7 +119,7 @@ export default function Footer() {
 
             {/* Copyright Section */}
             <div className="mt-8 pt-4 border-t border-white/20">
-              <p className="text-white/60 text-sm">
+              <p className="text-light/60 text-sm">
                 © {new Date().getFullYear()} Eren Erisgen. All rights reserved.
               </p>
             </div>
