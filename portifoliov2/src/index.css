@@ -94,6 +94,12 @@ body {
   border-width: 1px;
 }
 
+.border-primary:focus {
+  border-color: var(--clr-primary-a0);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .bg-info {
   background-color: var(--clr-info-a0);
   color: var(--clr-light-a0);
