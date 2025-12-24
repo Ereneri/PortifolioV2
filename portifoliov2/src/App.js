@@ -21,7 +21,7 @@ function App() {
     {
       name: "PlanTalk",
       description:
-        "Planetalk allows you to chat with the sun or any planet in our system using the power of OpenAI's GPT3.5. Built with React, Node.js, and TailwindCSS.",
+        "PlanTalk allows you to chat with the sun or any planet in our system using the power of OpenAI's GPT3.5. Built with React, Node.js, and TailwindCSS.",
     },
     {
       name: "OurToDos",
@@ -37,22 +37,21 @@ function App() {
   ];
   return (
     <div className="App bg-primary">
-      <defs>
-        <path id="textPath" d="M10 50 C10 0 90 0 90 50" />
-      </defs>
       <NavBar />
       <div
         id="home"
-        className="min-h-screen flex flex-col gap-8 max-w-[1100px] mx-auto pt-16"
+        className="min-h-screen flex flex-col gap-8 max-w-[1100px] mx-auto py-8"
       >
-        <div className="flex flex-col p-4 gap-4 justify-center items-start h-72">
-          <h1 className="text-7xl font-extrabold text-light">Eren Erisgen</h1>
-          <h2 className="text-2xl secondary-text code-font uppercase">
+        <div className="flex flex-col p-4 gap-4 justify-center items-center my-8">
+          <h1 className="text-9xl font-extrabold text-light leading-none">
+            Eren Erisgen
+          </h1>
+          <h2 className="text-2xl secondary-text code-font uppercase pl-1">
             Software Engineer && Computer Scientist
           </h2>
         </div>
 
-        <div className="mx-auto max-w-[200px] md:max-w-full pb-16">
+        <div className="mx-auto max-w-[200px] md:max-w-full py-16">
           <div className="flex gap-8 items-center flex-col md:flex-row">
             <div className="basis-1/3">
               <img
@@ -62,10 +61,10 @@ function App() {
               />
             </div>
             <div className="basis-2/3 flex flex-col gap-4">
-              <h3 className="text-4xl text-left font-bold primary-text uppercase">
+              <h3 className="text-2xl text-left font-bold primary-text uppercase">
                 Welcome
               </h3>
-              <p className="text-xl text-left text-light">
+              <p className="text-xl text-light text-justify">
                 Howdy! I'm Eren Erisgen—a Software Engineer and Computer
                 Scientist living in the beautiful state of Minnesota. I proudly
                 graduated from the University of Minnesota with a B.S. in
@@ -83,7 +82,7 @@ function App() {
           </div>
         </div>
 
-        <h2 className="text-4xl w-full primary-text font-bold mb-4 uppercase">
+        <h2 className="text-2xl w-full primary-text font-bold mb-4 uppercase">
           Featured Projects
         </h2>
 

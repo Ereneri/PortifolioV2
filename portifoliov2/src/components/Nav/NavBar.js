@@ -4,9 +4,9 @@ import { Bars4Icon, CommandLineIcon, HomeIcon, UserIcon } from "@heroicons/react
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   const navLinks = [
-    { name: "Home", href: "#home", Icon : HomeIcon},
-    { name: "Projects", href: "#projects", Icon: CommandLineIcon },
-    { name: "About", href: "#about", Icon : UserIcon  },
+    { name: "Home", href: "/", Icon : HomeIcon},
+    { name: "Projects", href: "/projects", Icon: CommandLineIcon },
+    { name: "About", href: "/about", Icon : UserIcon  },
   ];
 
   const ulClass = open
