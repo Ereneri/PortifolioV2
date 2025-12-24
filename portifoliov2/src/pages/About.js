@@ -1,23 +1,22 @@
-import React from "react";
 import workExperienceData from "../data/workExperience.json";
 
 function About() {
   return (
-    <div className="min-h-screen max-w-[1100px] mx-auto py-8">
-      <div className="flex flex-row gap-8 items-center justify-center pt-8">
+    <div className="min-h-screen max-w-[1100px] mx-auto py-8 pt-8 md:px-0 px-4">
+      <div className="flex flex-row gap-8 items-center justify-center">
         <img
           src="/profilepicture.jpeg"
           alt="Profile"
           className="rounded-full w-40"
         />
         <div className="text-left">
-          <h1 className="text-7xl font-extrabold text-light">Eren Erisgen</h1>
+          <h1 className="md:text-7xl text-5xl font-extrabold text-light">Eren Erisgen</h1>
           <h1 className="text-4xl text-light">About Me</h1>
         </div>
       </div>
 
       <div className="flex gap-8 items-center flex-col md:flex-row py-16">
-        <p className="text-xl text-light text-justify">
+        <p className="md:text-xl text-light md:text-justify text-left">
           As a Software Engineer, I strive every day to build software that
           meaningfully improves the lives of both my coworkers and customers. My
           education at the University of Minnesota, Twin Cities, has equipped me
@@ -43,7 +42,7 @@ function About() {
               <img
                 src={`/${company.image}`}
                 alt={`${company.company} Logo`}
-                className="w-16 h-16 mr-4 rounded-xl"
+                className="w-16 h-16 mr-4 rounded-xl md:display hidden"
               />
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold text-light">
@@ -51,14 +50,14 @@ function About() {
                 </h3>
                 {company.positions.map((position, positionIndex) => (
                   <div key={positionIndex} className="relative">
-                    <div className="w-full justify-between flex">
+                    <div className="w-full md:justify-between flex md:flex-row flex-col">
                       <div className="flex items-center gap-4">
                         <span className="w-2 h-2 shrink-0 bg-tertiary rounded-full relative z-10" />
                         <h4 className="text-xl text-secondary code-font">
                           {position.title}
                         </h4>
                       </div>
-                      <h4 className="text-xl font-base font-semibold">
+                      <h4 className="md:text-xl font-base font-semibold md:ml-0 ml-6">
                         {position.period}
                       </h4>
                     </div>
@@ -75,7 +74,7 @@ function About() {
                           style={{ marginLeft: "3px" }}
                         ></div>
                       )}
-                      <ul className="list-disc list-inside text-justify text-light ml-2 mt-2">
+                      <ul className="list-disc list-inside md:text-justify text-light ml-2 mt-2">
                         {position.responsibilities.map(
                           (responsibility, idx) => (
                             <li key={idx} className="mb-2 leading-snug">
@@ -99,18 +98,18 @@ function About() {
           <img
             src="/umn.jpeg"
             alt="University of Minnesota Seal"
-            className="w-16 h-16 mr-4 rounded-xl"
+            className="w-16 h-16 mr-4 rounded-xl md:block hidden"
           />
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between w-full md:flex-row flex-col">
             <div className="text-left">
-              <h3 className="text-2xl font-semibold text-light">
+              <h3 className="md:text-2xl font-semibold text-light text-xl">
                 University of Minnesota, Twin Cities
               </h3>
               <p className="text-lg tertiary-text">
                 Bachelor of Science in Computer Science
               </p>
             </div>
-            <div className="text-right">
+            <div className="md:text-right text-left">
               <h3 className="text-xl font-base text-light">GPA: 3.94/4.0</h3>
               <p className="text-lg tertiary-text">
                 College of Science and Engineering

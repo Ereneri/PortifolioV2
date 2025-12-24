@@ -1,16 +1,15 @@
-import React from "react";
-import { projectsList } from "../data/projects";
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
+import projectsList from "../data/projects.json";
+import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div
       id="home"
-      className="min-h-screen flex flex-col gap-8 max-w-[1100px] mx-auto py-8 pt-16"
+      className="min-h-screen flex flex-col gap-8 md:max-w-[1100px] mx-auto py-8 pt-16 md:px-0 px-4"
     >
       <div className="flex flex-col p-4 gap-4 justify-center items-center">
-        <h1 className="text-9xl font-extrabold text-light leading-none">
+        <h1 className="md:text-9xl font-extrabold text-light leading-none text-7xl">
           Eren Erisgen
         </h1>
         <h2 className="text-2xl secondary-text code-font uppercase pl-1">
@@ -18,20 +17,20 @@ function Home() {
         </h2>
       </div>
 
-      <div className="mx-auto max-w-[200px] md:max-w-full py-16">
+      <div className="mx-auto md:max-w-full py-16">
         <div className="flex gap-8 items-center flex-col md:flex-row">
           <div className="basis-1/3">
             <img
               src="/profilepicture.jpeg"
               alt="Profile"
-              className="rounded-full"
+              className="md:rounded-full rounded-lg"
             />
           </div>
           <div className="basis-2/3 flex flex-col gap-4">
             <h3 className="text-2xl text-left font-bold primary-text uppercase">
               Welcome
             </h3>
-            <p className="text-xl text-light text-justify">
+            <p className="md:text-xl text-light md:text-justify text-left">
               Howdy! I'm Eren Erisgen—a Software Engineer and Computer Scientist
               living in the beautiful state of Minnesota. I proudly graduated
               from the University of Minnesota with a B.S. in Computer Science
@@ -53,24 +52,12 @@ function Home() {
           </h3>
           <div className="gap-8 grid-cols-1 md:grid-cols-2 grid">
             {projectsList.map(({ id, name, description }) => (
-              <Link
+              <ProjectCard
                 key={id}
-                to={`/projects/${id}`}
-                className="mx-auto rounded-3xl bg-tertiary p-8 gap-8 flex flex-col text-light transition-all cursor-pointer duration-300 group hover:scale-105 hover:bg-[var(--clr-info-a0)]"
-              >
-                <div className="text-left flex flex-col gap-4">
-                  <span className="text-4xl code-font font-bold transition-colors leading-6 uppercase">
-                    {name}
-                  </span>
-                  <span className="text-base">{description}</span>
-                </div>
-                <button className="rounded-xl text-base gap-2 flex justify-between transition-colors duration-300">
-                  <span className="uppercase whitespace-nowrap">
-                    View Project
-                  </span>
-                  <ArrowRightIcon className="inline secondary-text w-5 h-5 mr-4 group-hover:mr-0 transition-all duration-300" />
-                </button>
-              </Link>
+                id={id}
+                name={name}
+                description={description}
+              />
             ))}
           </div>
         </div>
