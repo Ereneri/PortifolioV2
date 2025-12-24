@@ -1,4 +1,5 @@
 import workExperienceData from "../data/workExperience.json";
+import technologies from "../data/technologies.json";
 
 function About() {
   return (
@@ -10,7 +11,9 @@ function About() {
           className="rounded-full w-40"
         />
         <div className="text-left">
-          <h1 className="md:text-7xl text-5xl font-extrabold text-light">Eren Erisgen</h1>
+          <h1 className="md:text-7xl text-5xl font-extrabold text-light">
+            Eren Erisgen
+          </h1>
           <h1 className="text-4xl text-light">About Me</h1>
         </div>
       </div>
@@ -28,8 +31,51 @@ function About() {
           towards being the best engineer I can be. In the future, I plan to
           explore cloud infrastructure and DevOps. To stay updated with my
           software engineering journey, you can bookmark this page or follow me
-          on <a className="primary-text hover:underline transition-colors" href="https://github.com/Ereneri" target="_blank" rel="noopener noreferrer">GitHub</a>. You can also connect with me on <a className="primary-text hover:underline transition-colors" href="https://www.linkedin.com/in/eren-erisgen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+          on{" "}
+          <a
+            className="primary-text hover:underline transition-colors"
+            href="https://github.com/Ereneri"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          . You can also connect with me on{" "}
+          <a
+            className="primary-text hover:underline transition-colors"
+            href="https://www.linkedin.com/in/eren-erisgen/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          .
         </p>
+      </div>
+
+      <div className="flex flex-col gap-4 pb-16">
+        <h2 className="text-3xl font-bold primary-text uppercase">
+          Technologies
+        </h2>
+        <div className="gap-8 grid-cols-1 md:grid-cols-2 grid">
+          {technologies.map((technology, technologyIndex) => (
+            <div key={technologyIndex} className="flex flex-col gap-2">
+              <h3 className="text-xl font-semibold text-tertiary flex items-center gap-2 uppercase">
+                {technology.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {technology.items.map((item, itemIndex) => (
+                  <span
+                    key={itemIndex}
+                    className="bg-primary px-2 py-1 text-sm rounded-lg text-light bg-tertiary cursor-default"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="flex flex-col gap-4 pb-16">

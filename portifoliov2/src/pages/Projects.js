@@ -5,17 +5,6 @@ import ProjectCard from "../components/ProjectCard";
 function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Extract all unique technologies from projects
-  const allTechnologies = useMemo(() => {
-    const techSet = new Set();
-    projectsList.forEach((project) => {
-      if (project.technologies) {
-        project.technologies.forEach((tech) => techSet.add(tech));
-      }
-    });
-    return Array.from(techSet).sort();
-  }, []);
-
   // Filter projects based on search term and selected technology
   const filteredProjects = useMemo(() => {
     return projectsList.filter((project) => {
@@ -35,7 +24,7 @@ function Projects() {
     <div className="min-h-screen max-w-[1100px] mx-auto py-8 px-4">
       <div className="flex flex-col gap-8">
         <h1 className="md:text-6xl text-4xl font-extrabold text-light">
-          My Projects
+          Projects
         </h1>
 
         <div className="flex flex-col md:flex-row gap-4">
