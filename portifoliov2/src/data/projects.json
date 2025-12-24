@@ -12,7 +12,27 @@
       "Genetic Algorithms"
     ],
     "githubUrl": "https://github.com/Ereneri/java-flappy-bird",
-    "liveUrl": ""
+    "liveUrl": "",
+    "media": [
+      {
+        "type": "image",
+        "url": "flappybird/gameplay.png",
+        "caption": "Flappy Bird gameplay",
+        "width": "small"
+      },
+      {
+        "type": "image",
+        "url": "flappybird/ReadyScreen.png",
+        "caption": "Flappy Bird Ready Screen",
+        "width": "small"
+      },
+      {
+        "type": "video",
+        "url": "flappybird/flappybird.mov",
+        "caption": "Flappy Bird Video",
+        "width": "small"
+      }
+    ]
   },
   {
     "id": "2048-solver",
@@ -25,11 +45,24 @@
       "C",
       "C++",
       "R",
-      "AI Search Algorithms",
-      "Game Theory"
+      "AI Search Algorithms"
     ],
-    "githubUrl": "",
-    "liveUrl": ""
+    "githubUrl": "https://github.com/Ereneri/cpp-2048-solver",
+    "liveUrl": "",
+    "media": [
+      {
+        "type": "pdf",
+        "url": "2048/AI_Final_Project_Analysis.pdf",
+        "caption": "2048 Final Project Analysis",
+        "width": "full"
+      },
+      {
+        "type": "pdf",
+        "url": "2048/AI_Final_Project.pdf",
+        "caption": "2048 Final Project",
+        "width": "full"
+      }
+    ]
   },
   {
     "id": "planetalk",
@@ -44,8 +77,22 @@
       "JavaScript",
       "OpenAI API"
     ],
-    "githubUrl": "",
-    "liveUrl": ""
+    "githubUrl": "https://github.com/JakeNauman/HackUIowa-2023-Project",
+    "liveUrl": "",
+    "media": [
+      {
+        "type": "image",
+        "url": "planet/earth-talking.png",
+        "caption": "PlaneTalk Earth Talking",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "url": "planet/neptune-resp.png",
+        "caption": "PlaneTalk Neptune Responding",
+        "width": "full"
+      }
+    ]
   },
   {
     "id": "ourtodos",
@@ -60,8 +107,58 @@
       "JavaScript",
       "PostgreSQL"
     ],
-    "githubUrl": "",
-    "liveUrl": ""
+    "githubUrl": "https://github.com/Ereneri/OurToDos",
+    "liveUrl": "",
+    "media": [
+      {
+        "type": "image",
+        "url": "otd/createlist.png",
+        "caption": "OurToDos Creating new List",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "otd/invite.png",
+        "caption": "OurToDos Inviting Users",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "otd/list.png",
+        "caption": "OurToDos List Page",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "otd/lists.png",
+        "caption": "OurToDos All Lists Page",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "otd/mList.png",
+        "caption": "OurToDos Mobile List Page",
+        "width": "small"
+      },
+      {
+        "type": "image",
+        "url": "otd/messages.png",
+        "caption": "OurToDos Login Error Messages",
+        "width": "small"
+      },
+      {
+        "type": "image",
+        "url": "otd/messages1.png",
+        "caption": "OurToDos Log out Success Messages",
+        "width": "small"
+      },
+      {
+        "type": "image",
+        "url": "otd/create.png",
+        "caption": "OurToDos Creating Account on Mobile",
+        "width": "small"
+      }
+    ]
   },
   {
     "id": "space-game",
@@ -72,10 +169,47 @@
     "fullDescription": "SpaceGame is a 8-bit space shooter game that was developed in Java. The game is a single player game where the player controls a spaceship and must avoid asteroids. The game is played in a 2D environment where the player, a spaceship, can move left, right, up, and down. The player can also shoot rockets that will destroy asteroids. The objective of the game is to increase your score by collecting metals: silver, iron, and gold. The player can also collect a wrench which will increase the player's health, which decreases if they collide with an asteroid. However, the player can also increase their health by using their score to purchase a 'mechanics repair' in the shop, or press 'H' as a shortcut. If the player can increase their health up to 200%, with 100% as the base health and an additionally 100% as a shield.",
     "technologies": [
       "Java",
-      "Swing",
       "Game Development"
     ],
-    "githubUrl": "",
-    "liveUrl": ""
+    "githubUrl": "https://github.com/Ereneri/SpaceGame",
+    "liveUrl": "",
+    "media": [
+      {
+        "type": "image",
+        "url": "SpaceGame/Title.png",
+        "caption": "SpaceGame Title Screen",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "SpaceGame/GamePlay.png",
+        "caption": "SpaceGame Game Play",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "SpaceGame/gameplay2.png",
+        "caption": "SpaceGame Game Play",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "SpaceGame/Help.png",
+        "caption": "SpaceGame Help Screen",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "SpaceGame/LeaderBoard.png",
+        "caption": "SpaceGame Leader Board",
+        "width": "medium"
+      },
+      {
+        "type": "image",
+        "url": "SpaceGame/Save.png",
+        "caption": "SpaceGame Save Screen",
+        "width": "medium"
+      }
+    ]
   }
 ]

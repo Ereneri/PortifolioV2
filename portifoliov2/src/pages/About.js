@@ -28,7 +28,7 @@ function About() {
           towards being the best engineer I can be. In the future, I plan to
           explore cloud infrastructure and DevOps. To stay updated with my
           software engineering journey, you can bookmark this page or follow me
-          on GitHub. You can also connect with me on LinkedIn.
+          on <a className="primary-text hover:underline transition-colors" href="https://github.com/Ereneri" target="_blank" rel="noopener noreferrer">GitHub</a>. You can also connect with me on <a className="primary-text hover:underline transition-colors" href="https://www.linkedin.com/in/eren-erisgen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ function About() {
               <img
                 src={`/${company.image}`}
                 alt={`${company.company} Logo`}
-                className="w-16 h-16 mr-4 rounded-xl md:display hidden"
+                className="w-16 h-16 mr-4 rounded-xl md:block hidden"
               />
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold text-light">
