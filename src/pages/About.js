@@ -1,12 +1,22 @@
 import workExperienceData from "../data/workExperience.json";
 import technologies from "../data/technologies.json";
+import profilePicture from "../assets/profilepicture.jpeg";
+import tbgLogo from "../assets/tbg.jpg";
+import thriventLogo from "../assets/thrivent.jpeg";
+import umnSeal from "../assets/umn.jpeg";
 
 function About() {
+  // Create a map of company images
+  const companyImages = {
+    "tbg.jpg": tbgLogo,
+    "thrivent.jpeg": thriventLogo
+  };
+
   return (
     <div className="min-h-screen max-w-[1100px] mx-auto py-8 pt-8 md:px-0 px-4">
       <div className="flex flex-row gap-8 items-center justify-center">
         <img
-          src="/profilepicture.jpeg"
+          src={profilePicture}
           alt="Profile"
           className="rounded-full w-40"
         />
@@ -88,7 +98,7 @@ function About() {
           {workExperienceData.map((company, companyIndex) => (
             <div key={companyIndex} className="flex justify-between w-full">
               <img
-                src={`/${company.image}`}
+                src={companyImages[company.image]}
                 alt={`${company.company} Logo`}
                 className="w-16 h-16 mr-4 rounded-xl md:block hidden"
               />
@@ -144,7 +154,7 @@ function About() {
         <h2 className="text-3xl font-bold primary-text uppercase">Education</h2>
         <div className="flex w-full flex-row">
           <img
-            src="/umn.jpeg"
+            src={umnSeal}
             alt="University of Minnesota Seal"
             className="w-16 h-16 mr-4 rounded-xl md:block hidden"
           />

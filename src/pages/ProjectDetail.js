@@ -2,6 +2,35 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowDownTrayIcon, ArrowLeftIcon, ChevronLeftIcon } from "@heroicons/react/16/solid";
 import projectsList from "../data/projects.json";
+import githubIcon from "../assets/github-mark-white.svg";
+
+// Import all project images
+import kafkaImg from "../assets/kafka.jpg";
+import flappybirdImg from "../assets/flappybird.jpg";
+import img2048 from "../assets/2048.png";
+import earthImg from "../assets/Earth.png";
+import otdThumbImg from "../assets/otdThumb.png";
+import gameThumbImg from "../assets/gameThumb.png";
+
+// Create image map for project thumbnails
+const projectImages = {
+  "kafka.jpg": kafkaImg,
+  "flappybird.jpg": flappybirdImg,
+  "2048.png": img2048,
+  "Earth.png": earthImg,
+  "otdThumb.png": otdThumbImg,
+  "gameThumb.png": gameThumbImg
+};
+
+// Helper function to get image path - for dynamic media, use require
+const getImagePath = (path) => {
+  try {
+    return require(`../assets/${path}`);
+  } catch (err) {
+    console.error(`Image not found: ${path}`);
+    return null;
+  }
+};
 
 function ProjectDetail() {
   const { projectId } = useParams();
@@ -96,7 +125,7 @@ function ProjectDetail() {
                 onClick={() => window.open(project.githubUrl, "_blank")}
                 className="cursor-pointer bg-secondary text-light px-4 py-2 rounded-xl font-semibold transition-all uppercase hover:bg-[var(--clr-info-a0)] text-sm flex items-center gap-2"
               >
-                <img src="/github-mark-white.svg" className="w-4 h-4" />
+                <img src={githubIcon} className="w-4 h-4" alt="GitHub" />
                 Github
               </button>
             )}
@@ -118,7 +147,7 @@ function ProjectDetail() {
           </div>
           <div className="flex flex-row items-center justify-start">
             <img
-              src={`/${project.image}`}
+              src={projectImages[project.image]}
               alt={`${project.name} Screenshot`}
               className="w-20 h-20 object-cover rounded-xl mr-6"
             />
@@ -165,10 +194,10 @@ function ProjectDetail() {
                     {item.type === "image" ? (
                       <div className="relative group">
                         <img
-                          src={`/${item.url}`}
+                          src={getImagePath(item.url)}
                           alt={item.caption || `Screenshot ${index + 1}`}
                           className="w-full h-auto rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-[1.02]"
-                          onClick={() => openLightbox(`/${item.url}`)}
+                          onClick={() => openLightbox(getImagePath(item.url))}
                         />
                         {item.caption && (
                           <p className="text-sm text-light mt-2 italic">
@@ -180,7 +209,7 @@ function ProjectDetail() {
                       <div className="flex flex-col gap-2">
                         <div className="relative group">
                           <video
-                            src={`/${item.url}`}
+                            src={getImagePath(item.url)}
                             controls
                             className="w-full h-auto rounded-xl shadow-lg"
                             preload="metadata"
@@ -198,7 +227,7 @@ function ProjectDetail() {
                       <div className="flex flex-col gap-2">
                         <div className="bg-tertiary rounded-xl p-4 shadow-lg">
                           <iframe
-                            src={`/${item.url}`}
+                            src={getImagePath(item.url)}
                             className="w-full h-[600px] rounded-lg"
                             title={item.caption || `PDF ${index + 1}`}
                           />
@@ -209,7 +238,7 @@ function ProjectDetail() {
                           </p>
                         )}
                         <a
-                          href={`/${item.url}`}
+                          href={getImagePath(item.url)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-secondary hover:underline text-sm flex items-center gap-1"

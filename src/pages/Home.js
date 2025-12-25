@@ -1,6 +1,7 @@
 import projectsList from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router-dom";
+import profilePicture from "../assets/profilepicture.jpeg";
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
         <div className="flex gap-8 items-center flex-col md:flex-row">
           <div className="basis-1/3">
             <img
-              src="/profilepicture.jpeg"
+              src={profilePicture}
               alt="Profile"
               className="md:rounded-full rounded-lg"
             />
