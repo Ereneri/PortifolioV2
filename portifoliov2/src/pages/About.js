@@ -14,22 +14,24 @@ function About() {
           <h1 className="md:text-7xl text-5xl font-extrabold text-light">
             Eren Erisgen
           </h1>
-          <h1 className="text-4xl text-light">About Me</h1>
         </div>
       </div>
 
-      <div className="flex gap-8 items-center flex-col md:flex-row py-16">
+      <div className="flex flex-col gap-4 pb-16">
+        <h2 className="text-3xl font-bold primary-text uppercase">
+          About Me
+        </h2>
         <p className="md:text-xl text-light md:text-justify text-left">
-          As a Software Engineer, I strive every day to build software that
-          meaningfully improves the lives of both my coworkers and customers. My
+          As a Software Engineer, I strive daily to build software that
+          meaningfully improves the life of users. My
           education at the University of Minnesota, Twin Cities, has equipped me
           with the skills to solve real-world problems effectively. I have a
           vast range of experience spanning from full-stack development to
           graduate-level algorithms. Through my prior experience at Thrivent
-          Financial and my current role at The Bernard Group, I’ve been pushed
+          Financial and my current role at The Bernard Group, I have been pushed
           to challenge assumptions, grow professionally, and continuously work
-          towards being the best engineer I can be. In the future, I plan to
-          explore cloud infrastructure and DevOps. To stay updated with my
+          toward being the best engineer I can be. In the future, I plan to
+          explore cloud infrastructure and development operations. To stay updated with my
           software engineering journey, you can bookmark this page or follow me
           on{" "}
           <a
@@ -60,7 +62,7 @@ function About() {
         <div className="gap-8 grid-cols-1 md:grid-cols-2 grid">
           {technologies.map((technology, technologyIndex) => (
             <div key={technologyIndex} className="flex flex-col gap-2">
-              <h3 className="text-xl font-semibold text-tertiary flex items-center gap-2 uppercase">
+              <h3 className="text-xl font-semibold text-tertiary flex items-center gap-2 uppercase code-font">
                 {technology.category}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -103,7 +105,7 @@ function About() {
                           {position.title}
                         </h4>
                       </div>
-                      <h4 className="md:text-xl font-base font-semibold md:ml-0 ml-6">
+                      <h4 className="md:text-xl font-base md:ml-0 ml-6">
                         {position.period}
                       </h4>
                     </div>

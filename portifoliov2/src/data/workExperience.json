@@ -7,11 +7,11 @@
         "title": "Associate Software Engineer",
         "period": "June 2025-Present",
         "responsibilities": [
-          "Developed a real-time web application, enabling concurrent users to strategically combine jobs, reducing planned man-hours by nearly 30%",
-          "Engineered networking solutions to permit AWS services interact with on-prem resources via an Application Load Balancer over a shared VPC origin",
-          "Designed independent serverless file management service using AWS Lambda, API Gateway, and S3 with CloudFront, to decouple file storage from monolithic application",
-          "Lead development on a new serverless order processing service for nested products using AWS Step Functions and AWS SQS",
-          "Optimized SQL query and Lambda execution performance for order processing service, halving execution time while using 4 times less memory"
+          "Developed a real-time web application enabling concurrent users to strategically combine jobs, reducing planned man-hours by nearly 30%",
+          "Engineered networking solutions to permit AWS services to interact with on-prem resources via an Application Load Balancer over a shared VPC origin",
+          "Designed an independent serverless file management service using AWS Lambda, API Gateway, and S3 with CloudFront to decouple file storage from a monolithic application",
+          "Led development on a new serverless order processing service for nested products using AWS Step Functions and AWS SQS",
+          "Optimized SQL query and Lambda execution performance for the order processing service, halving execution time while using 4 times less memory"
         ]
       },
       {
@@ -19,9 +19,9 @@
         "period": "Summer 2024",
         "responsibilities": [
           "Engineered an AWS Lambda function to address production memory constraints caused by Java ImageIO caching",
-          "Built an automated QR code generation service incorporated in work tickets, eliminating manual retrieval and reducing operational costs",
+          "Built an automated QR code generation service incorporated into work tickets, eliminating manual retrieval and reducing operational costs",
           "Developed and executed Level 2 data passing for Braintree transaction requests, reducing transaction fees",
-          "Upgraded existing checkout process by adding “Checkout with PayPal” utilizing the Braintree user vault"
+          "Upgraded the existing checkout process by adding “Checkout with PayPal” utilizing the Braintree user vault"
         ]
       }
     ]
@@ -32,14 +32,14 @@
     "positions": [
       {
         "title": "Intern, Java Developer",
-        "period": "June 2025-Present",
+        "period": "Summer 2023",
         "responsibilities": [
-          "Resolved a two-year-old bug and upgraded two existing production processes",
-          "Implemented a JavaScript design that decreased execution time by up to 80%",
-          "Devised a bot to validate a process with upwards of 17,000 daily transactions",
+          "Resolved a two-year-old production bug and upgraded two legacy production automations",
+          "Implemented a new JavaScript web scraping design that decreased execution time by up to 80%",
+          "Devised an automated task bot to validate a process with upwards of 17,000 daily transactions",
           "Designed an alert that notified the team of low work volume, eliminating the need for 6 daily manual checks",
-          "Successfully developed production automation in 20% less time than estimated",
-          "Learned the software development pipeline, Agile workflow, and incident ticketing"
+          "Successfully developed production automation with 20% less execution time than estimated",
+          "Learned the software development pipeline, Agile workflow, and HelpDesk incident ticketing"
         ]
       }
     ]

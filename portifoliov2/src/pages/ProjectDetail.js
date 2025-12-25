@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowDownTrayIcon, ArrowLeftIcon, ChevronLeftIcon } from "@heroicons/react/16/solid";
 import projectsList from "../data/projects.json";
@@ -19,6 +19,29 @@ function ProjectDetail() {
     setLightboxOpen(false);
     setLightboxImage("");
   };
+
+  // Handle ESC key and prevent background scrolling
+  useEffect(() => {
+    if (lightboxOpen) {
+      // Prevent scrolling on the body
+      document.body.style.overflow = "hidden";
+
+      // Handle ESC key
+      const handleEscKey = (event) => {
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+      };
+
+      document.addEventListener("keydown", handleEscKey);
+
+      // Cleanup function
+      return () => {
+        document.body.style.overflow = "unset";
+        document.removeEventListener("keydown", handleEscKey);
+      };
+    }
+  }, [lightboxOpen]);
 
   // Helper function to get width class based on width property
   const getWidthClass = (width) => {
