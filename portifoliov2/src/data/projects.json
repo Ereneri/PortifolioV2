@@ -1,7 +1,7 @@
 [
   {
     "id": "kafka-streams",
-    "updatedAt": "August 15th, 2024",
+    "updatedAt": "April 11th, 2025",
     "name": "Kafka Streams",
     "image": "kafka.jpg",
     "description": "Real-time data processing applications built with Apache Kafka Streams to analyze music streaming trends and business metrics.",
