@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { HomeIcon, CommandLineIcon, UserIcon, PaperAirplaneIcon } from "@heroicons/react/16/solid";
+import { HomeIcon, CommandLineIcon, UserIcon } from "@heroicons/react/16/solid";
 
 export default function Footer() {
   const [formData, setFormData] = useState({
