@@ -130,7 +130,7 @@ function ProjectDetail() {
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="bg-primary px-2 py-1 text-sm rounded-lg text-light bg-tertiary cursor-default"
+                className="bg-primary px-4 py-2 text-sm rounded-xl text-light bg-tertiary cursor-default"
               >
                 {tech}
               </span>

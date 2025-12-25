@@ -12,7 +12,7 @@ function Home() {
         <h1 className="md:text-9xl font-extrabold text-light leading-none text-7xl">
           Eren Erisgen
         </h1>
-        <h2 className="text-2xl secondary-text code-font uppercase pl-1">
+        <h2 className="text-2xl secondary-text font-semibold code-font uppercase">
           Software Engineer && Computer Scientist
         </h2>
       </div>
@@ -32,11 +32,26 @@ function Home() {
             </h3>
             <p className="md:text-xl text-light md:text-justify text-left">
               Howdy! I'm Eren Erisgen—a Software Engineer and Computer Scientist
-              living in the beautiful state of Minnesota. I proudly graduated
-              from the University of Minnesota with a B.S. in Computer Science
-              and currently work as an Associate Software Engineer at{" "}
-              <a href="https://thebernardgroup.com/">The Bernard Group</a>.
-              During my time at university, I explored everything from
+              based in beautiful Minnesota. I proudly graduated from the {" "}
+              <a
+                className="primary-text hover:underline transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twin-cities.umn.edu/"
+              >
+                 University of Minnesota
+              </a>
+              {" "} with a B.S. in Computer Science and
+              currently work as an Associate Software Engineer at{" "}
+              <a
+                className="primary-text hover:underline transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://thebernardgroup.com/"
+              >
+                The Bernard Group
+              </a>
+              . During my time at university, I explored everything from
               graduate-level algorithms to software engineering and event-driven
               architecture. I love working with Java, C, and JavaScript. On this
               site, you'll find some of my favorite projects and links to the
